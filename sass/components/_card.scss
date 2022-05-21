@@ -1,6 +1,6 @@
 .card {
   // *** FUNCTIONALITY
-  perspective: 150rem;
+  perspective: 150rem; //¡ adds 3d 3ffect. The less the number the more dramatic effect
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
@@ -14,8 +14,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    backface-visibility: hidden;
-    overflow: hidden;
+    backface-visibility: hidden; //¡ to hide tha back side of en element
+    overflow: hidden; //¡ to force border-radius on image
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   }
 
@@ -26,6 +26,7 @@
   .card__side--back {
     transform: rotateY(180deg);
 
+    // • Modifiers for 3 backsides of the cards
     &--1 {
       background-image: linear-gradient(
         to right bottom,
@@ -66,7 +67,7 @@
   &__picture {
     background-size: cover;
     height: 23rem;
-    background-blend-mode: screen;
+    background-blend-mode: screen; //¡ to me it's like a filter
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
@@ -114,7 +115,7 @@
   &__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+    box-decoration-break: clone; //¡ makes the wraped lines of an inline to be styled as separated units, so that padding (e.g.) applys to both lines.
 
     &--1 {
       background-image: linear-gradient(
@@ -150,7 +151,7 @@
       margin: 0 auto;
 
       li {
-        text-align: center;
+        text-align: center; //¡ whenever there is a inline text element this works great
         font-size: 1.5rem;
         padding: 1rem;
 
@@ -164,10 +165,7 @@
   // *** BACK SIDE STYLING
 
   &__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absCenter;
     width: 90%;
     text-align: center;
   }

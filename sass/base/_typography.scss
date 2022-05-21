@@ -11,7 +11,7 @@ body {
   text-transform: uppercase;
   /* text-align: center; */
 
-  backface-visibility: hidden;
+  backface-visibility: hidden; //¡ resolves some glitch
   margin-bottom: 6rem;
 
   &--main {
@@ -20,7 +20,7 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
 
-    animation: moveInLeft 1s ease-out;
+    animation: moveInLeft 1s ease-out; //¡ animation
   }
 
   &--sub {
@@ -29,7 +29,7 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
 
-    animation: moveInRight 1s ease-out;
+    animation: moveInRight 1s ease-out; //¡ animation
   }
 }
 
@@ -46,7 +46,7 @@ body {
   );
   cursor: default;
 
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; //¡ uses text as a mask to clip the background
   background-clip: text;
   color: transparent;
   transition: all 0.2s;

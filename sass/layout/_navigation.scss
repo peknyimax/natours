@@ -53,10 +53,7 @@
 
   &__list {
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absCenter;
     list-style: none;
     text-align: center;
   }
@@ -75,7 +72,7 @@
       color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
-
+      //¡ background animation of links in the navigation
       background-image: linear-gradient(
         120deg,
         transparent 0 50%,
@@ -89,7 +86,7 @@
     &:hover,
     &:active {
       color: $color-primary;
-      background-position: 100%;
+      background-position: 100%; //¡ background animation of links in the navigation
       transform: translateX(1rem);
       box-shadow: 0 1rem 4rem rgba($color-black, 0.1);
     }
@@ -99,7 +96,7 @@
       display: inline-block;
     }
   }
-
+  //¡ Check-box Hack :)
   // • FUNCTIONALITY
   &__checkbox:checked ~ &__bg {
     transform: scale(80);
@@ -141,7 +138,7 @@
       top: 0.8rem;
     }
   }
-
+  //! note on these selectors
   &__button:hover &__icon::before {
     top: -1rem;
   }

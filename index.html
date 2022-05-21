@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en ">
 
 <head>
   <meta charset="UTF-8">
@@ -17,6 +17,8 @@
 </head>
 
 <body>
+
+
 
   <div class="navigation">
     <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
@@ -173,7 +175,7 @@
                   <p class="card__price-only">Only</p>
                   <p class="card__price-value">$297</p>
                 </div>
-                <a href="#" class="btn btn--white">Book now!</a>
+                <a href="#popup" class="btn btn--white">Book now!</a>
               </div>
 
             </div>
@@ -210,7 +212,7 @@
                   <p class="card__price-only">Only</p>
                   <p class="card__price-value">$497</p>
                 </div>
-                <a href="#" class="btn btn--white">Book now!</a>
+                <a href="#popup" class="btn btn--white">Book now!</a>
               </div>
 
             </div>
@@ -247,7 +249,7 @@
                   <p class="card__price-only">Only</p>
                   <p class="card__price-value">$897</p>
                 </div>
-                <a href="#" class="btn btn--white">Book now!</a>
+                <a href="#popup" class="btn btn--white">Book now!</a>
               </div>
 
             </div>
@@ -277,9 +279,10 @@
 
       <div class="row">
         <div class="story">
+          <!-- ¡ Figure element -->
           <figure class="story__shape">
             <img class="story__img" src="img/nat-8.jpg" alt="Person on a tour">
-            <gigcaption class="story__caption">Mary Smith</gigcaption>
+            <figcaption class="story__caption">Mary Smith</figcaption>
           </figure>
           <div class="story__text">
             <h3 class="heading-tertiary u-margin-bottom-small">I had a best week ever with my family</h3>
@@ -388,6 +391,26 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup" id="popup">
+    <div class="popup__content">
+      <div class="popup__left">
+        <img class="popup__img" src="img/nat-8.jpg" alt="Tour photo">
+        <img class="popup__img" src="img/nat-9.jpg" alt="Tour photo">
+      </div>
+      <div class="popup__right">
+        <a href="#section-tours" class="popup__close">&times;</a>
+        <h2 class="heading-secondary u-margin-bottom-small">Start bookin now</h2>
+        <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+        <p class="popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis fuga maxime, quod
+          possimus quaerat ea soluta unde quae omnis laboriosam nemo alias enim vero non esse recusandae nihil
+          aspernatur neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius excepturi sed, dolore
+          repellendus dolorem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet perferendis possimus
+          incidunt excepturi reiciendis praesentium ullam, officiis fugiat veniam iusto?</p>
+        <a href="#" class="btn btn--green">Book now</a>
+      </div>
+    </div>
+  </div>
 
   <!-- GRID of FLOATS -->
   <!-- <section class="grid-test">

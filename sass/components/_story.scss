@@ -25,7 +25,9 @@
     float: left;
 
     // ¡ shape-outside works only if floated and has width and height
-    shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(
+      50% at 50% 50%
+    ); //¡ to make element float around floated in a shape
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     // there was a glitch along &__shape margins -> "overflow: hidden" helped
@@ -59,6 +61,6 @@
 
   &:hover &__img {
     transform: translateX(-4rem) scale(1);
-    filter: blur(3px) brightness(80%);
+    filter: blur(3px) brightness(80%); //¡ filter property
   }
 }

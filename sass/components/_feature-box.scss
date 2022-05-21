@@ -15,7 +15,7 @@
       $color-primary-dark
     );
     -webkit-background-clip: text;
-    background-clip: text;
+    background-clip: text; //¡ again using icon as a mask to clip background
     color: transparent;
   }
 
