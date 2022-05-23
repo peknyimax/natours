@@ -11,7 +11,7 @@ body {
   text-transform: uppercase;
   /* text-align: center; */
 
-  backface-visibility: hidden; //¡ resolves some glitch
+  // backface-visibility: hidden; //¡ resolves some glitch
   margin-bottom: 6rem;
 
   &--main {
@@ -21,6 +21,11 @@ body {
     letter-spacing: 3.5rem;
 
     animation: moveInLeft 1s ease-out; //¡ animation
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -30,6 +35,10 @@ body {
     letter-spacing: 1.75rem;
 
     animation: moveInRight 1s ease-out; //¡ animation
+
+    @include respond(phone) {
+      letter-spacing: 0.5 rem;
+    }
   }
 }
 
@@ -39,21 +48,35 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   display: inline-block;
-  background-image: linear-gradient(
-    to right,
-    $color-primary-light,
-    $color-primary-dark
-  );
-  cursor: default;
+  background-image: linear-gradient(#fff 0 0.99%, transparent 0.99%),
+    linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark 99.9%,
+      transparent 99.9%
+    );
 
-  -webkit-background-clip: text; //¡ uses text as a mask to clip the background
+  cursor: default;
   background-clip: text;
+  -webkit-background-clip: text; //¡ uses text as a mask to clip the background
   color: transparent;
   transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+    @include respond(phone) {
+      font-size: 2.5rem;
+      transform: none;
+      text-shadow: none;
+    }
   }
 }
 

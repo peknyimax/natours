@@ -23,19 +23,35 @@
 
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
+
+    @media (max-width: 44.5em) {
+      width: 90%;
+    }
   }
 
   &__left {
     width: 33.3333333%;
     display: table-cell; //¡ To give sibligns same height automatically
     vertical-align: middle; //¡ and then easily align content in center
+
+    @include respond(tab-land) {
+      padding-left: 3rem;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
   }
 
   &__right {
     padding: 3rem 5rem;
-    right: 66.6666667%;
+    width: 66.6666667%;
     display: table-cell; //¡ To give sibligns same height automatica
     vertical-align: middle; //¡ and then easily align content in center
+
+    @include respond(tab-land) {
+      padding: 2rem 3rem;
+    }
   }
 
   &__img {
@@ -55,11 +71,19 @@
     column-count: 2;
     column-gap: 4rem; //if 1em = 14px;
     column-rule: 1px solid $color-grey-light-2; //¡ border wetween columns
-
     -moz-hyphens: auto; // ¡ there are tools for auto-prefixes. Don't do by hand
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; //¡ hypens for the text
+
+    @include respond(tab-land) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(phone) {
+      -moz-column-count: 1;
+      column-count: 1;
+    }
   }
 
   // ¡ element has an id, and button targets to this (href="id") - this selector works in this case
