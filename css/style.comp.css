@@ -21,6 +21,7 @@ ORDER Base + typography > genral layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%; }
   @media only screen and (min-width: 112.5em) {
     html {
@@ -182,7 +183,7 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active, .btn:focus {
+.btn:active {
   outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
@@ -519,7 +520,11 @@ body {
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  /* &::placeholder {
+      color: $color-grey-dark-2;
+      
+    } */ }
   @media only screen and (max-width: 56.25em) {
     .form__input {
       width: 100%; } }
@@ -529,8 +534,6 @@ body {
     border-bottom: 3px solid #55c57a; }
   .form__input:focus:invalid {
     border-bottom: 3px solid #ff7730; }
-  .form__input::-webkit-input-placeholder {
-    color: #999; }
 
 .form__label {
   font-size: 1.2rem;
