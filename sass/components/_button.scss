@@ -6,14 +6,14 @@
     padding: 1.5rem 4rem;
     border-radius: 10rem;
     font-size: 1.6rem;
-    text-decoration: none; //¡ these are <a> elements
+    text-decoration: none; //NOTE these are <a> elements
     text-transform: uppercase;
 
     position: relative;
 
     transition: all 0.3s;
 
-    //¡ Change for the <button> element
+    //NOTE Change for the <button> element
     border: none;
     cursor: pointer;
   }
@@ -22,7 +22,7 @@
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
-    //¡ Adding a scaling background using ::after
+    //NOTE Adding a scaling background using ::after
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
@@ -69,8 +69,8 @@
   }
 
   &--animated {
-    animation: moveInBottom 0.5s ease-out 0.75s; //¡ with delay of 0.75s
-    animation-fill-mode: backwards; //¡ makes the button invisible from the begining
+    animation: moveInBottom 0.5s ease-out 0.75s; //NOTE with delay of 0.75s
+    animation-fill-mode: backwards; //NOTE makes the button invisible from the begining
   }
 }
 

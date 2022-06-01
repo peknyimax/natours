@@ -5,7 +5,7 @@
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); //¡ clip-path
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); //NOTE clip-path
   position: relative;
 
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),

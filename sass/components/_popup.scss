@@ -17,12 +17,12 @@
   }
 
   &__content {
-    @include absCenter; //¡ mixin for abolute positioning to center
+    @include absCenter; //NOTE mixin for abolute positioning to center
     width: 75%;
     background-color: $color-white;
     border-radius: 3px;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
-    display: table; //¡ To have both child have the same height automatically
+    display: table; //NOTE To have both child have the same height automatically
     overflow: hidden;
     transition: all 0.4s 0.2s;
 
@@ -36,8 +36,8 @@
 
   &__left {
     width: 33.3333333%;
-    display: table-cell; //¡ To give sibligns same height automatically
-    vertical-align: middle; //¡ and then easily align content in center
+    display: table-cell; //NOTE To give sibligns same height automatically
+    vertical-align: middle; //NOTE and then easily align content in center
 
     @include respond(tab-land) {
       padding-left: 3rem;
@@ -51,8 +51,8 @@
   &__right {
     padding: 3rem 5rem;
     width: 66.6666667%;
-    display: table-cell; //¡ To give sibligns same height automatica
-    vertical-align: middle; //¡ and then easily align content in center
+    display: table-cell; //NOTE To give sibligns same height automatica
+    vertical-align: middle; //NOTE and then easily align content in center
 
     @include respond(tab-land) {
       padding: 2rem 3rem;
@@ -68,18 +68,18 @@
     font-size: 1.4rem;
     margin-bottom: 4rem;
 
-    // ¡ columns for the peragraphs
+    // NOTE columns for the peragraphs
     -moz-column-count: 2;
     -moz-column-gap: 4rem;
     -moz-column-rule: 1px solid $color-grey-light-2;
 
     column-count: 2;
     column-gap: 4rem; //if 1em = 14px;
-    column-rule: 1px solid $color-grey-light-2; //¡ border wetween columns
-    -moz-hyphens: auto; // ¡ there are tools for auto-prefixes. Don't do by hand
+    column-rule: 1px solid $color-grey-light-2; //NOTE border wetween columns
+    -moz-hyphens: auto; // NOTE there are tools for auto-prefixes. Don't do by hand
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
-    hyphens: auto; //¡ hypens for the text
+    hyphens: auto; //NOTE hypens for the text
 
     @include respond(tab-land) {
       margin-bottom: 2rem;
@@ -91,7 +91,7 @@
     }
   }
 
-  // ¡ element has an id, and button targets to this (href="id") - this selector works in this case
+  // NOTE element has an id, and button targets to this (href="id") - this selector works in this case
   &:target {
     opacity: 1;
     visibility: visible;

@@ -25,7 +25,7 @@
   &__navigation {
     border-top: 1px solid $color-grey-light-2;
     padding-top: 2rem;
-    // ¡ to make shorter border-line simply display it as inline-block
+    // NOTE to make shorter border-line simply display it as inline-block
     display: inline-block;
     @include respond(tab-port) {
       width: 100%;

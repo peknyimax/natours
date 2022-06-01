@@ -109,7 +109,8 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   display: inline-block;
-  background-image: linear-gradient(#fff 0 0.99%, transparent 0.99%), linear-gradient(to right, #7ed56f, #28b485 99.9%, transparent 99.9%);
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  clip-path: inset(0.009%);
   cursor: default;
   background-clip: text;
   -webkit-background-clip: text;

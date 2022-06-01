@@ -30,31 +30,31 @@ Breakpoint argument choices
 ORDER Base + typography > genral layout + grid > page layout > components
 */
 
-//¡ Use relatives units ("rem" and "em" are not affected by root font-size -
-//¡ thay always = to the font-size that comes from the browser: 16px-default)
-//¡ Also "em" is better practice to use in @media queries
+// NOTE Use relatives units ("rem" and "em" are not affected by root font-size -
+//      thay always = to the font-size that comes from the browser: 16px-default)
+//      Also "em" is better practice to use in @media queries
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    //¡ 600px / 16px = 37.5em
+    //NOTE 600px / 16px = 37.5em
     @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
   @if $breakpoint == tab-port {
-    //¡ 900px / 16px = 56.25em
+    //NOTE 900px / 16px = 56.25em
     @media only screen and (max-width: 56.25em) {
       @content;
     }
   }
   @if $breakpoint == tab-land {
-    //¡ 1200px / 16px = 75em
+    //NOTE 1200px / 16px = 75em
     @media only screen and (max-width: 75em) {
       @content;
     }
   }
   @if $breakpoint == big-desktop {
-    //¡ 1800px / 16px = 112.5em
+    //NOTE 1800px / 16px = 112.5em
     @media only screen and (min-width: 112.5em) {
       @content;
     }

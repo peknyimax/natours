@@ -14,12 +14,9 @@
     font-size: 6rem;
     margin-bottom: 0.5rem;
     display: inline-block;
-    background-image: linear-gradient(
-      $color-primary-light,
-      $color-primary-dark
-    );
+    background-image: linear-gradient($color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
-    background-clip: text; //¡ again using icon as a mask to clip background
+    background-clip: text; //NOTE again using icon as a mask to clip background
     color: transparent;
 
     @include respond(tab-port) {

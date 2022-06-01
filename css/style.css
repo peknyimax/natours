@@ -109,7 +109,8 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   display: inline-block;
-  background-image: linear-gradient(#fff 0 0.99%, transparent 0.99%), linear-gradient(to right, #7ed56f, #28b485 99.9%, transparent 99.9%);
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  clip-path: inset(0.009%);
   cursor: default;
   background-clip: text;
   -webkit-background-clip: text;
@@ -518,7 +519,11 @@ body {
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  /* &::placeholder {
+      color: $color-grey-dark-2;
+      
+    } */ }
   @media only screen and (max-width: 56.25em) {
     .form__input {
       width: 100%; } }
@@ -528,8 +533,6 @@ body {
     border-bottom: 3px solid #55c57a; }
   .form__input:focus:invalid {
     border-bottom: 3px solid #ff7730; }
-  .form__input::-webkit-input-placeholder {
-    color: #999; }
 
 .form__label {
   font-size: 1.2rem;

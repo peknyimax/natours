@@ -35,13 +35,10 @@
     right: 6.5rem;
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 
-    // ¡ z-index works only on defined position (fixed here)
+    // NOTE z-index works only on defined position (fixed here)
     z-index: 2;
 
-    background-image: radial-gradient(
-      $color-primary-light,
-      $color-primary-dark
-    );
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
 
     @include respond(tab-port) {
       top: 4.5rem;
@@ -91,12 +88,8 @@
       color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
-      //¡ background animation of links in the navigation
-      background-image: linear-gradient(
-        120deg,
-        transparent 0 50%,
-        $color-white 50% 100%
-      );
+      //NOTE background animation of links in the navigation
+      background-image: linear-gradient(120deg, transparent 0 50%, $color-white 50% 100%);
       background-size: 230%;
 
       transition: all 0.4s;
@@ -105,7 +98,7 @@
     &:hover,
     &:active {
       color: $color-primary;
-      background-position: 100%; //¡ background animation of links in the navigation
+      background-position: 100%; //NOTE background animation of links in the navigation
       transform: translateX(1rem);
       box-shadow: 0 1rem 4rem rgba($color-black, 0.1);
     }
@@ -115,7 +108,7 @@
       display: inline-block;
     }
   }
-  //¡ Check-box Hack :)
+  //NOTE Check-box Hack :)
   // • FUNCTIONALITY
   &__checkbox:checked ~ &__bg {
     transform: scale(80);

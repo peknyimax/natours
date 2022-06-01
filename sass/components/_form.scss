@@ -4,16 +4,16 @@
   }
 
   &__input {
-    font-family: inherit; //¡ by default has its own values - need to be inherited
+    font-family: inherit; //NOTE by default has its own values - needs to be inherited
     font-size: 1.5rem;
-    color: inherit; //¡ by default has its own values - need to be inherited
+    color: inherit; //NOTE by default has its own values - needs to be inherited
     padding: 1.5rem 2rem;
     border: none;
     border-radius: 2px;
     background-color: rgba($color-white, 0.5);
     border-bottom: 3px solid transparent;
     width: 90%;
-    display: block; //¡ inline by default
+    display: block; //NOTE inline by default
     transition: all 0.3s;
 
     @include respond(tab-port) {
@@ -31,9 +31,10 @@
       border-bottom: 3px solid $color-secondary-dark;
     }
 
-    &::-webkit-input-placeholder {
+    /* &::placeholder {
       color: $color-grey-dark-2;
-    }
+      
+    } */
   }
 
   &__label {
@@ -44,7 +45,7 @@
     display: block;
     transition: all 0.3s;
   }
-  // ! note on this selector
+  // NOTE move placeholder using this selector
   &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;

@@ -11,7 +11,7 @@ body {
   text-transform: uppercase;
   /* text-align: center; */
 
-  // backface-visibility: hidden; //¡ resolves some glitch
+  // backface-visibility: hidden; //NOTE Property - backface-visibility - (here) resolves glitch
   margin-bottom: 6rem;
 
   &--main {
@@ -20,7 +20,7 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
 
-    animation: moveInLeft 1s ease-out; //¡ animation
+    animation: moveInLeft 1s ease-out; //NOTE Property - animation
 
     @include respond(phone) {
       letter-spacing: 1rem;
@@ -34,7 +34,7 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
 
-    animation: moveInRight 1s ease-out; //¡ animation
+    animation: moveInRight 1s ease-out; //NOTE Property - animation
 
     @include respond(phone) {
       letter-spacing: 0.5 rem;
@@ -48,17 +48,20 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   display: inline-block;
-  background-image: linear-gradient(#fff 0 0.99%, transparent 0.99%),
-    linear-gradient(
-      to right,
-      $color-primary-light,
-      $color-primary-dark 99.9%,
-      transparent 99.9%
-    );
+  // background-image: linear-gradient(#fff 0 0.99%, transparent 0.99%),
+  //   linear-gradient(
+  //     to right,
+  //     $color-primary-light,
+  //     $color-primary-dark 99.9%,
+  //     transparent 99.9%
+  //   );
+
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  clip-path: inset(0.009%);
 
   cursor: default;
   background-clip: text;
-  -webkit-background-clip: text; //¡ uses text as a mask to clip the background
+  -webkit-background-clip: text; //NOTE Property - background-clip - text as a mask to clip the background
   color: transparent;
   transition: all 0.2s;
 

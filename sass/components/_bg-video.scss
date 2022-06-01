@@ -1,5 +1,5 @@
 .bg-video {
-  position: absolute; //¡ parent (.section-stories) is relative and has only padding
+  position: absolute; //NOTE parent (.section-stories) is relative and has only padding
   top: 0;
   left: 0;
   height: 100%;
@@ -10,6 +10,6 @@
   &__content {
     width: 100%;
     height: 100%;
-    object-fit: cover; //¡ like background-position, but for <video> element
+    object-fit: cover; //NOTE like background-position, but for <video> element
   }
 }
